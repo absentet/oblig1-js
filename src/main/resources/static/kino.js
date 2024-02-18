@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const billetter = [];
 
-    document.getElementById('kjopBillett').onclick = kjopBillett();
+    document.getElementById('kjopBillett').addEventListener('click', kjopBillett);
     document.getElementById('slettAlle').addEventListener('click', slettAlleBilletter);
 
     function kjopBillett() {
         console.log("test")
-        const film = document.getElementById('film').value;
+        const film = document.getElementById('filmer').value;
         const antall = document.getElementById('antall').value;
         const fornavn = document.getElementById('fornavn').value;
         const etternavn = document.getElementById('etternavn').value;
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function blankUtFelter() {
-        document.getElementById('film').value = '';
+        document.getElementById('filmer').value = '';
         document.getElementById('antall').value = '';
         document.getElementById('fornavn').value = '';
         document.getElementById('etternavn').value = '';
