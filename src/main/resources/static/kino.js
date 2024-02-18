@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('slettAlle').addEventListener('click', slettAlleBilletter);
 
     function kjopBillett() {
-        console.log("test")
         const film = document.getElementById('filmer').value;
         const antall = document.getElementById('antall').value;
         const fornavn = document.getElementById('fornavn').value;
@@ -55,9 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         const billett = { film, antall, fornavn, etternavn, telefonnr, epost };
-        console.log(billett)
         billetter.push(billett);
-        console.log(billetter)
         visBilletter();
         blankUtFelter();
     }
