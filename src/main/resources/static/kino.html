@@ -2,9 +2,97 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Bestilling av kinobilletter</title>
 </head>
+
 <body>
+
+<h1>Bestilling av kinobilletter</h1>
+
+<form id="billett">
+    <div style="padding-bottom: 15px">
+        <label for="filmer">Velg film:</label>
+
+        <select name="filmer" id="filmer">
+            <option value="dieHard">Die Hard</option>
+            <option value="barbie">Barbie</option>
+            <option value="interstellar">Interstellar</option>
+            <option value="treasurePlanet">Treasure Planet</option>
+        </select>
+    </div>
+
+    <div style="padding-bottom: 15px">
+        <label for="antall">Antall:</label>
+        <input type="number" id="antall" name="antall" style="max-width: 40px" required>
+    </div>
+
+    <div style="padding-bottom: 5px">
+        <label for="fornavn">Fornavn:</label>
+        <input type="text" id="fornavn" name="fornavn" required>
+    </div>
+
+    <div style="padding-bottom: 5px">
+        <label for="etternavn">Etternavn:</label>
+        <input type="text" id="etternavn" name="etternavn" required>
+    </div>
+
+    <div style="padding-bottom: 5px">
+        <label for="telefonnr">Telefonnr:</label>
+        <input type="tel" id="telefonnr" name="telefonnr" required>
+    </div>
+
+    <div style="padding-bottom: 5px">
+        <label for="epost">Epost:</label>
+        <input type="email" id="epost" name="epost" required>
+    </div>
+
+    <div style="padding-bottom: 5px">
+        <button id="kjopBillett" type="button" value="kjopBillett">
+            Kjøp billett
+        </button>
+    </div>
+
+
+</form>
+
+<div class="mt-8">
+    <h2 class="text-xl font-bold mb-4">Alle billetter</h2>
+
+    <div class="mt-8">
+
+        <table id="billettListe" class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50">
+            <tr>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Film
+                </th>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Antall
+                </th>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Fornavn
+                </th>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Etternavn
+                </th>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Telefonnr
+                </th>
+                <th scope="col" class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                    Epost
+                </th>
+            </tr>
+            </thead>
+        </table>
+    </div>
+    <div style="padding-bottom: 5px">
+        <button id="slettAlle" type="button">
+            Slett alle billettene
+        </button>
+    </div>
+
+</div>
 
 </body>
 </html>
+
